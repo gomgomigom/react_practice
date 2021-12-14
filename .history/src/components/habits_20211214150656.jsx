@@ -17,10 +17,10 @@ class Habits extends Component {
   render() {
     return (
       <ul>
-        {this.props.habits.map((habit) => (
+        {this.props.state.habits.map((habit) => (
           <Habit
-            key={habit.key}
-            habit={habit}
+            key={this.props.key}
+            habit={this.props.habit}
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}

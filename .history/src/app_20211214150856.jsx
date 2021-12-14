@@ -46,13 +46,12 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        <Navbar
-          count={this.state.habits.filter((item) => item.count > 0).length}
-        />
+      <div>
+        <Navbar />
         <Add />
         <Habits
-          habits={this.state.habits}
+          key={this.state.id}
+          habit={this.state.habit}
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}
           onDelete={this.handleDelete}
@@ -60,7 +59,7 @@ class App extends Component {
         <button onClick={this.deleteAll} className='reset__btn'>
           Reset All
         </button>
-      </>
+      </div>
     );
   }
 }

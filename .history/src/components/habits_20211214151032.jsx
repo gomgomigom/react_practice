@@ -17,15 +17,13 @@ class Habits extends Component {
   render() {
     return (
       <ul>
-        {this.props.habits.map((habit) => (
-          <Habit
-            key={habit.key}
-            habit={habit}
-            onIncrement={this.handleIncrement}
-            onDecrement={this.handleDecrement}
-            onDelete={this.handleDelete}
-          />
-        ))}
+        <Habit
+          key={this.props.key}
+          habit={this.props.habit}
+          onIncrement={this.handleIncrement}
+          onDecrement={this.handleDecrement}
+          onDelete={this.handleDelete}
+        />
       </ul>
     );
   }

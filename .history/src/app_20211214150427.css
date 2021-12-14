@@ -1,9 +1,5 @@
-* {
-  box-sizing: border-box;
-}
-
 button {
-  outline: none;
+  outline: 0;
   border: 0;
   cursor: pointer;
 }

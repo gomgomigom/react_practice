@@ -11,7 +11,13 @@ class Habits extends Component {
   };
 
   handleDelete = (habit) => {
-    this.props.onDelete(habit);
+    this.props.onDelete(this.props.habit);
+  };
+
+  deleteAll = () => {
+    const habits = [...this.state.habits];
+    habits.splice(0, habits.length);
+    this.setState({ habits: habits });
   };
 
   render() {
@@ -19,13 +25,16 @@ class Habits extends Component {
       <ul>
         {this.props.habits.map((habit) => (
           <Habit
-            key={habit.key}
+            key={habit.id}
             habit={habit}
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}
           />
         ))}
+        <button onClick={this.deleteAll} className='reset__btn'>
+          Reset All
+        </button>
       </ul>
     );
   }

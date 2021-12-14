@@ -8,7 +8,7 @@ class App extends Component {
   state = {
     habits: [
       { id: 1, name: 'Reading', count: 0 },
-      { id: 2, name: 'Running', count: 0 },
+      { id: 2, name: 'Runnig', count: 0 },
       { id: 3, name: 'Coding', count: 0 },
     ],
   };
@@ -46,21 +46,22 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        <Navbar
-          count={this.state.habits.filter((item) => item.count > 0).length}
-        />
+      <div>
+        <Navbar />
         <Add />
-        <Habits
-          habits={this.state.habits}
-          onIncrement={this.handleIncrement}
-          onDecrement={this.handleDecrement}
-          onDelete={this.handleDelete}
-        />
+        {this.state.habits.map((habit) => (
+          <Habits
+            key={habit.id}
+            habit={habit}
+            onIncrement={this.handleIncrement}
+            onDecrement={this.handleDecrement}
+            onDelete={this.handleDelete}
+          />
+        ))}
         <button onClick={this.deleteAll} className='reset__btn'>
           Reset All
         </button>
-      </>
+      </div>
     );
   }
 }

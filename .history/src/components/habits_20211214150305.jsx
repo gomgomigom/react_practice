@@ -14,18 +14,22 @@ class Habits extends Component {
     this.props.onDelete(habit);
   };
 
+  deleteAll = () => {
+    const habits = [...this.state.habits];
+    habits.splice(0, habits.length);
+    this.setState({ habits: habits });
+  };
+
   render() {
     return (
       <ul>
-        {this.props.habits.map((habit) => (
-          <Habit
-            key={habit.key}
-            habit={habit}
-            onIncrement={this.handleIncrement}
-            onDecrement={this.handleDecrement}
-            onDelete={this.handleDelete}
-          />
-        ))}
+        <Habit
+          key={this.props.key}
+          habit={this.props.habit}
+          onIncrement={this.handleIncrement}
+          onDecrement={this.handleDecrement}
+          onDelete={this.handleDelete}
+        />
       </ul>
     );
   }

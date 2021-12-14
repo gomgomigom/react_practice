@@ -19,7 +19,7 @@ class Habits extends Component {
       <ul>
         {this.props.habits.map((habit) => (
           <Habit
-            key={habit.key}
+            key={habit.id}
             habit={habit}
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}

@@ -1,9 +1,5 @@
-* {
-  box-sizing: border-box;
-}
-
 button {
-  outline: none;
+  outline: 0;
   border: 0;
   cursor: pointer;
 }
@@ -82,6 +78,6 @@ button {
   background-color: green;
   color: white;
   padding: 1rem;
-  margin: 0 2.5rem;
+  margin: 1rem;
   font-size: 1.5rem;
 }

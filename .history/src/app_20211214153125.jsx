@@ -47,9 +47,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Navbar
-          count={this.state.habits.filter((item) => item.count > 0).length}
-        />
+        <Navbar count={this.state.count} />
         <Add />
         <Habits
           habits={this.state.habits}

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import Habits from './components/habits';
-import Navbar from './components/navbar';
-import './app.css';
-import Add from './components/add';
+import Habit from './habit';
 
-class App extends Component {
+class Habits extends Component {
   state = {
     habits: [
       { id: 1, name: 'Reading', count: 0 },
@@ -15,10 +12,7 @@ class App extends Component {
 
   handleIncrement = (habit) => {
     console.log(`handleIncrement ${habit.name}`);
-    const habits = [...this.state.habits];
-    const index = habits.indexOf(habit);
-    habits[index].count++;
-    this.setState({ habits: habits });
+    this.props.onIncrement(this.props.habit);
   };
 
   handleDecrement = (habit) => {
@@ -46,23 +40,23 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        <Navbar
-          count={this.state.habits.filter((item) => item.count > 0).length}
-        />
-        <Add />
-        <Habits
-          habits={this.state.habits}
-          onIncrement={this.handleIncrement}
-          onDecrement={this.handleDecrement}
-          onDelete={this.handleDelete}
-        />
+      <ul>
+        {this.state.habits.map((habit) => (
+          <Habit
+            key={habit.id}
+            habit={habit}
+            habitName={habit.name}
+            onIncrement={this.handleIncrement}
+            onDecrement={this.handleDecrement}
+            onDelete={this.handleDelete}
+          />
+        ))}
         <button onClick={this.deleteAll} className='reset__btn'>
           Reset All
         </button>
-      </>
+      </ul>
     );
   }
 }
 
-export default App;
+export default Habits;
