@@ -32,7 +32,7 @@ class Habits extends Component {
   handleDelete = (habit) => {
     console.log(`handleDelete ${habit.name}`);
     const habits = this.state.habits.filter((item) => item.id !== habit.id);
-    this.setState({ habits });
+    this.setState({ habits: habits });
     // const habits = [...this.state.habits];
     // const index = habits.indexOf(habit);
     // if (index > -1) {
