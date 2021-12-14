@@ -35,9 +35,9 @@ class Habits extends Component {
     this.setState({ habits });
   };
 
-  deleteAll = () => {
+  deleteAll = (habit) => {
     const habits = [...this.state.habits];
-    habits.splice(0, habits.length);
+    habits = [...];
     this.setState({ habits: habits });
   };
 

@@ -73,10 +73,3 @@ button {
   font-size: 2rem;
   color: darkred;
 }
-
-.reset__btn {
-  background-color: green;
-  color: white;
-  padding: 1rem;
-  font-size: 1.5rem;
-}

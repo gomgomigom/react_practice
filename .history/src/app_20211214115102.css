@@ -4,36 +4,8 @@ button {
   cursor: pointer;
 }
 
-.navbar {
-  background-color: beige;
-  padding: 1em;
-}
-
-.navbar__logo {
-  color: green;
-}
-
-.input {
-  padding: 0.5rem;
-  margin: 1rem 1.5rem;
-  font-size: 2rem;
-  margin-bottom: 0;
-}
-
-.box {
-  width: 350px;
-}
-
-.input__btn {
-  background-color: green;
-  width: 100px;
-  height: 3.5rem;
-  font-size: 1.5rem;
-  color: white;
-}
-
 .habit,
-.navbar__title {
+.navbar__desc {
   font-size: 2.5rem;
   padding: 0.5rem;
   list-style: none;
@@ -72,11 +44,4 @@ button {
 .habit-delete {
   font-size: 2rem;
   color: darkred;
-}
-
-.reset__btn {
-  background-color: green;
-  color: white;
-  padding: 1rem;
-  font-size: 1.5rem;
 }

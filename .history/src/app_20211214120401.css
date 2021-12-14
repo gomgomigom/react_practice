@@ -29,7 +29,6 @@ button {
   width: 100px;
   height: 3.5rem;
   font-size: 1.5rem;
-  color: white;
 }
 
 .habit,
@@ -72,11 +71,4 @@ button {
 .habit-delete {
   font-size: 2rem;
   color: darkred;
-}
-
-.reset__btn {
-  background-color: green;
-  color: white;
-  padding: 1rem;
-  font-size: 1.5rem;
 }

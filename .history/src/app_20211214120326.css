@@ -26,10 +26,8 @@ button {
 
 .input__btn {
   background-color: green;
-  width: 100px;
-  height: 3.5rem;
-  font-size: 1.5rem;
-  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .habit,
@@ -72,11 +70,4 @@ button {
 .habit-delete {
   font-size: 2rem;
   color: darkred;
-}
-
-.reset__btn {
-  background-color: green;
-  color: white;
-  padding: 1rem;
-  font-size: 1.5rem;
 }

@@ -35,12 +35,6 @@ class Habits extends Component {
     this.setState({ habits });
   };
 
-  deleteAll = () => {
-    const habits = [...this.state.habits];
-    habits.splice(0, habits.length);
-    this.setState({ habits: habits });
-  };
-
   render() {
     return (
       <ul>
@@ -54,9 +48,7 @@ class Habits extends Component {
             onDelete={this.handleDelete}
           />
         ))}
-        <button onClick={this.deleteAll} className='reset__btn'>
-          Reset All
-        </button>
+        <button className='reset__btn'>Reset All</button>
       </ul>
     );
   }
