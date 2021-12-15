@@ -1,18 +1,17 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
-class Add extends PureComponent {
+class Add extends Component {
   formRef = React.createRef();
   inputRef = React.createRef();
   onSubmit = (event) => {
     event.preventDefault();
     const habitName = this.inputRef.current.value;
     habitName && this.props.onAdd(habitName);
-    this.formRef.current.reset();
     // this.inputRef.current.value = '';
+    this.formRef.current.reset();
   };
 
   render() {
-    console.log('add');
     return (
       <form ref={this.formRef} onSubmit={this.onSubmit} className='input'>
         <input

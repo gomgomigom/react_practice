@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
-class Add extends PureComponent {
+class Add extends Component {
   formRef = React.createRef();
   inputRef = React.createRef();
   onSubmit = (event) => {
@@ -12,7 +12,6 @@ class Add extends PureComponent {
   };
 
   render() {
-    console.log('add');
     return (
       <form ref={this.formRef} onSubmit={this.onSubmit} className='input'>
         <input
