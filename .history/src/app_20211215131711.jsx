@@ -39,11 +39,10 @@ class App extends Component {
   };
 
   handleReset = () => {
-    const habits = this.state.habits.map((habit) => {
+    const habits = [...this.state.habits];
+    habits.map((habit) => {
       habit.count = 0;
-      return habit;
     });
-    this.setState({ habits });
   };
 
   handleAdd = (name) => {
@@ -55,7 +54,7 @@ class App extends Component {
     return (
       <>
         <Navbar
-          totalCount={this.state.habits.filter((item) => item.count > 0).length}
+          count={this.state.habits.filter((item) => item.count > 0).length}
         />
         <Habits
           habits={this.state.habits}

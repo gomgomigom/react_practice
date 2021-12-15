@@ -19,6 +19,12 @@ class Habits extends Component {
     this.props.onAdd(name);
   };
 
+  deleteAll = () => {
+    const habits = [...this.state.habits];
+    habits.splice(0, habits.length);
+    this.setState({ habits: habits });
+  };
+
   render() {
     return (
       <>
@@ -34,7 +40,7 @@ class Habits extends Component {
             />
           ))}
         </ul>
-        <button onClick={this.props.onReset} className='reset__btn'>
+        <button onClick={this.deleteAll} className='reset__btn'>
           Reset All
         </button>
       </>
