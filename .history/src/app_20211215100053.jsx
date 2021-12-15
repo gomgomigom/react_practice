@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Habits from './components/habits';
 import Navbar from './components/navbar';
 import './app.css';
-import { v4 as uuid } from 'uuid';
 
 class App extends Component {
   state = {
@@ -44,9 +43,9 @@ class App extends Component {
     this.setState({ habits: habits });
   };
 
-  handleAdd = (name) => {
-    const habits = [...this.state.habits, { id: uuid(), name, count: 0 }];
-    this.setState({ habits: habits });
+  onAdd = (habit) => {
+    const habits = [...this.state.habits];
+    habits.push(habit);
   };
 
   render() {
@@ -60,7 +59,7 @@ class App extends Component {
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}
           onDelete={this.handleDelete}
-          onAdd={this.handleAdd}
+          onAdd={this.onAdd}
         />
         <button onClick={this.deleteAll} className='reset__btn'>
           Reset All

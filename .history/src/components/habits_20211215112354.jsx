@@ -16,7 +16,8 @@ class Habits extends Component {
   };
 
   handleAdd = (name) => {
-    this.props.onAdd(name);
+    this.props.onAdd(ref, name, count);
+    console.log(ref, name, count);
   };
 
   render() {

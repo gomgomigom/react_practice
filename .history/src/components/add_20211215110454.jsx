@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 
 class Add extends Component {
-  formRef = React.createRef();
   inputRef = React.createRef();
   onSubmit = (event) => {
     event.preventDefault();
-    const habitName = this.inputRef.current.value;
-    habitName && this.props.onAdd(habitName);
-    // this.inputRef.current.value = '';
-    this.formRef.current.reset();
+    console.log('submit');
+    console.log(event);
+    console.log(this.inputRef.value);
   };
 
   render() {
     return (
-      <form ref={this.formRef} onSubmit={this.onSubmit} className='input'>
+      <form onSubmit={this.onSubmit} className='input'>
         <input
           ref={this.inputRef}
           type='text'
@@ -27,5 +25,6 @@ class Add extends Component {
     );
   }
 }
+b;
 
 export default Add;

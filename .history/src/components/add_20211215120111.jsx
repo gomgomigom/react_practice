@@ -8,12 +8,11 @@ class Add extends Component {
     const habitName = this.inputRef.current.value;
     habitName && this.props.onAdd(habitName);
     // this.inputRef.current.value = '';
-    this.formRef.current.reset();
   };
 
   render() {
     return (
-      <form ref={this.formRef} onSubmit={this.onSubmit} className='input'>
+      <form onSubmit={this.onSubmit} className='input'>
         <input
           ref={this.inputRef}
           type='text'

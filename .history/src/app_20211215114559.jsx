@@ -45,7 +45,7 @@ class App extends Component {
   };
 
   handleAdd = (name) => {
-    const habits = [...this.state.habits, { id: uuid(), name, count: 0 }];
+    const habits = [...this.state.habits, { id: 0, name: name, count: 0 }];
     this.setState({ habits: habits });
   };
 

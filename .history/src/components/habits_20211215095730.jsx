@@ -15,15 +15,11 @@ class Habits extends Component {
     this.props.onDelete(habit);
   };
 
-  handleAdd = (name) => {
-    this.props.onAdd(name);
-  };
-
   render() {
     return (
       <>
-        <Add onAdd={this.handleAdd} />
         <ul>
+          <Add />
           {this.props.habits.map((habit) => (
             <Habit
               key={habit.key}

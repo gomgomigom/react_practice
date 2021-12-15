@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: beige;
+  padding: 1em;
+}
+
+.navbar__logo {
+  color: green;
+}
+
+.input {
+  padding: 0.5rem;
+  margin: 1rem 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.box {
+  width: 350px;
+}
+
+.input__btn {
+  background-color: green;
+  width: 100px;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.habit,
+.navbar__title {
+  font-size: 2.5rem;
+  padding: 0.5rem;
+  list-style: none;
+}
+
+.habit-count,
+.navbar__count {
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  margin-left: 0.2em;
+  margin-right: 0.5em;
+  background-color: darkseagreen;
+  color: white;
+  border-radius: 50%;
+}
+
+.habit-button {
+  font-size: 2.5rem;
+  margin: 0 0.1em;
+  background-color: transparent;
+}
+
+.habit-button:hover {
+  opacity: 0.8;
+}
+
+.habit-increase,
+.habit-decrease {
+  color: goldenrod;
+}
+
+.habit-delete {
+  font-size: 2rem;
+  color: darkred;
+}
+
+.reset__btn {
+  background-color: green;
+  color: white;
+  padding: 1rem;
+  margin: 0 2.5rem;
+  font-size: 1.5rem;
+}

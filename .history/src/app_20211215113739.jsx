@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Habits from './components/habits';
 import Navbar from './components/navbar';
 import './app.css';
-import { v4 as uuid } from 'uuid';
 
 class App extends Component {
   state = {
@@ -45,7 +44,7 @@ class App extends Component {
   };
 
   handleAdd = (name) => {
-    const habits = [...this.state.habits, { id: uuid(), name, count: 0 }];
+    const habits = [...this.state.habits, { id: 0, name: name, count: 0 }];
     this.setState({ habits: habits });
   };
 

@@ -8,7 +8,6 @@ class Add extends Component {
     const habitName = this.inputRef.current.value;
     habitName && this.props.onAdd(habitName);
     // this.inputRef.current.value = '';
-    this.formRef.current.reset();
   };
 
   render() {
