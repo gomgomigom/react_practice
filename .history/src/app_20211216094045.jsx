@@ -37,17 +37,15 @@ class App extends Component {
   };
 
   handleDelete = (habit) => {
+    console.log(`handleDelete ${habit.name}`);
     const habits = this.state.habits.filter((item) => item.id !== habit.id);
     this.setState({ habits });
   };
 
   handleReset = () => {
     const habits = this.state.habits.map((habit) => {
-      if (habit.count !== 0) {
-        return { ...habit, count: 0 };
-      } else {
-        return habit;
-      }
+      habit.count = 0;
+      return habit;
     });
     this.setState({ habits });
   };

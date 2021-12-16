@@ -45,8 +45,6 @@ class App extends Component {
     const habits = this.state.habits.map((habit) => {
       if (habit.count !== 0) {
         return { ...habit, count: 0 };
-      } else {
-        return habit;
       }
     });
     this.setState({ habits });
