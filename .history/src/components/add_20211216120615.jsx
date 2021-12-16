@@ -1,6 +1,6 @@
-import React, { memo } from 'react';
+import React, { memo} from 'react';
 
-const Add = memo((props) => {
+const Add = memo(props) => {
   const formRef = React.createRef();
   const inputRef = React.createRef();
 
@@ -23,6 +23,6 @@ const Add = memo((props) => {
       <button className='input__btn'>Add</button>
     </form>
   );
-});
+};
 
 export default Add;

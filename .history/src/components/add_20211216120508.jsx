@@ -1,6 +1,6 @@
-import React, { memo } from 'react';
+import React, { memo, PureComponent } from 'react';
 
-const Add = memo((props) => {
+const Add = (props) => {
   const formRef = React.createRef();
   const inputRef = React.createRef();
 
@@ -20,9 +20,11 @@ const Add = memo((props) => {
         className='input box'
         placeholder='input your habit'
       />
-      <button className='input__btn'>Add</button>
+      <button onClick={addHabit} className='input__btn'>
+        Add
+      </button>
     </form>
   );
-});
+};
 
 export default Add;
