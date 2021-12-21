@@ -3,17 +3,17 @@ import React, { memo, useCallback } from 'react';
 const Habit = memo((props) => {
   const name = props.habit.name;
   const count = props.habit.count;
-  const handleIncrement = useCallback(() => {
+  const handleIncrement = useCallback((props) => {
     props.onIncrement(props.habit);
-  }, [props]);
+  }), [props.habit];
 
-  const handleDecrement = useCallback(() => {
+  const handleDecrement = () => {
     props.onDecrement(props.habit);
-  }, [props]);
+  };
 
-  const handleDelete = useCallback(() => {
+  const handleDelete = () => {
     props.onDelete(props.habit);
-  }, [props]);
+  };
 
   return (
     <li className='habit'>

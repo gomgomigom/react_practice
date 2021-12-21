@@ -9,11 +9,11 @@ const Habit = memo((props) => {
 
   const handleDecrement = useCallback(() => {
     props.onDecrement(props.habit);
-  }, [props]);
+  } [habit];
 
-  const handleDelete = useCallback(() => {
+  const handleDelete = () => {
     props.onDelete(props.habit);
-  }, [props]);
+  };
 
   return (
     <li className='habit'>

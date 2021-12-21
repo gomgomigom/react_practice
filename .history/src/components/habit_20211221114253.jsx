@@ -7,13 +7,13 @@ const Habit = memo((props) => {
     props.onIncrement(props.habit);
   }, [props]);
 
-  const handleDecrement = useCallback(() => {
+  const handleDecrement = () => {
     props.onDecrement(props.habit);
-  }, [props]);
+  };
 
-  const handleDelete = useCallback(() => {
+  const handleDelete = () => {
     props.onDelete(props.habit);
-  }, [props]);
+  };
 
   return (
     <li className='habit'>
