@@ -24,10 +24,10 @@ class Habits extends PureComponent {
       <>
         <Add onAdd={this.handleAdd} />
         <ul>
-          {this.props.habits.map((habit) => (
+          {this.props.habits.map((habitss) => (
             <Habit
-              key={habit.key}
-              habit={habit}
+              key={habitss.key}
+              habit={habitss}
               onIncrement={this.handleIncrement}
               onDecrement={this.handleDecrement}
               onDelete={this.handleDelete}

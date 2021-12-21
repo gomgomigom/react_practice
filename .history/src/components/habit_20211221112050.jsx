@@ -5,6 +5,10 @@ const Habit = memo((props) => {
   const count = props.habit.count;
   const handleIncrement = () => {
     props.onIncrement(props.habit);
+    console.log(props);
+    console.log(props);
+    console.log(props.habit);
+    console.log(props.habit.name);
   };
 
   const handleDecrement = () => {

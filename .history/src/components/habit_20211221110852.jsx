@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 
 const Habit = memo((props) => {
-  const name = props.habit.name;
-  const count = props.habit.count;
+  const name = props.name;
+  const count = props.count;
   const handleIncrement = () => {
     props.onIncrement(props.habit);
   };
@@ -17,7 +17,7 @@ const Habit = memo((props) => {
 
   return (
     <li className='habit'>
-      <span className='habit-name'>{name}</span>
+      <span className='habit-name'>DF{name}</span>
       <span className='habit-count'>{count}</span>
       <button className='habit-button habit-increase' onClick={handleIncrement}>
         <i className='fas fa-plus-square'></i>

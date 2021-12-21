@@ -1,10 +1,11 @@
 import React, { memo } from 'react';
 
 const Habit = memo((props) => {
-  const name = props.habit.name;
-  const count = props.habit.count;
+  const name = props.name;
+  const count = props.count;
   const handleIncrement = () => {
     props.onIncrement(props.habit);
+    console.log(props.habit.name);
   };
 
   const handleDecrement = () => {
@@ -32,4 +33,4 @@ const Habit = memo((props) => {
   );
 });
 
-export default Habit;
+export default Habitss;

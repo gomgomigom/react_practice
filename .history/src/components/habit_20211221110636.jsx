@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 
 const Habit = memo((props) => {
-  const name = props.habit.name;
-  const count = props.habit.count;
+  const name = props.name;
+  const count = props.count;
   const handleIncrement = () => {
     props.onIncrement(props.habit);
   };
