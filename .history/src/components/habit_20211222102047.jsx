@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 
 const Habit = memo(({ habit, onIncrement, onDecrement, onDelete }) => {
   const handleIncrement = () => {

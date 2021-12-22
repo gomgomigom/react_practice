@@ -24,7 +24,7 @@ const Habits = ({
           />
         ))}
       </ul>
-      <button onClick={onReset} className='reset__btn'>
+      <button onClick={props.onReset} className='reset__btn'>
         Reset All
       </button>
     </>

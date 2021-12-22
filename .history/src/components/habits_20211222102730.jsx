@@ -18,13 +18,13 @@ const Habits = ({
           <Habit
             key={habit.key}
             habit={habit}
-            onIncrement={onIncrement}
-            onDecrement={onDecrement}
-            onDelete={onDelete}
+            onIncrement={handleIncrement}
+            onDecrement={handleDecrement}
+            onDelete={handleDelete}
           />
         ))}
       </ul>
-      <button onClick={onReset} className='reset__btn'>
+      <button onClick={props.onReset} className='reset__btn'>
         Reset All
       </button>
     </>

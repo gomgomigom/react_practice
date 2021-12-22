@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 
 const Habit = memo(({ habit, onIncrement, onDecrement, onDelete }) => {
   const handleIncrement = () => {
@@ -9,14 +9,14 @@ const Habit = memo(({ habit, onIncrement, onDecrement, onDelete }) => {
     onDecrement(habit);
   };
 
-  const handleDelete = () => {
-    onDelete(habit);
-  };
+  const handleDelete = useCallback(() => {
+    props.onDelete(props.habit);
+  }, [props]);
 
   return (
     <li className='habit'>
-      <span className='habit-name'>{habit.name}</span>
-      <span className='habit-count'>{habit.count}</span>
+      <span className='habit-name'>{name}</span>
+      <span className='habit-count'>{count}</span>
       <button className='habit-button habit-increase' onClick={handleIncrement}>
         <i className='fas fa-plus-square'></i>
       </button>
